@@ -1,1 +1,17 @@
+package vectors;
+
+import arraylists.Employee;
+
+import java.util.List;
+import java.util.Vector;
+
+public class MainVectors {
+    public static void main(String[] args) {
+        List<Employee> employeeList= new Vector<>();
+        employeeList.add(new Employee("Abhinav","Vashisth",10));
+        employeeList.add(new Employee("Anubhav","Pandey",11));
+        employeeList.add(new Employee("Aryaman","Pathania",12));
+        employeeList.add(new Employee("Ashutosh","Sharma",13));
+    }
+}
 
