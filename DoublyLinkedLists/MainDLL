@@ -1,0 +1,35 @@
+package doublylinkedlists;
+
+public class MainDLL {
+    public static void main(String[] args) {
+        EmployeeDLL janeJones = new EmployeeDLL("Jane", "Jones", 123);
+        EmployeeDLL johnDoe = new EmployeeDLL("John", "Doe", 4567);
+        EmployeeDLL marySmith = new EmployeeDLL("Mary", "Smith", 22);
+        EmployeeDLL mikeWilson = new EmployeeDLL("Mike", "Wilson", 3245);
+        EmployeeDLL billEnd = new EmployeeDLL("Bill", "End", 78);
+        EmployeeDoublyLinkedList list=new EmployeeDoublyLinkedList();
+        list.addToFront(janeJones);
+        list.addToFront(johnDoe);
+        list.addToFront(mikeWilson);
+        list.addToFront(billEnd);
+        list.printList();
+        System.out.println(list.getSize());
+        System.out.println("-----------------------");
+        EmployeeDLL billend=new EmployeeDLL("Bill","End",16);
+        list.addToEnd(billend);
+        list.printList();
+        System.out.println(list.getSize());
+        System.out.println("-----------------------");
+        list.removeFromFront();
+        list.printList();
+        System.out.println(list.getSize());
+        System.out.println("-----------------------");
+        list.removeFromEnd();
+        list.printList();
+        System.out.println(list.getSize());
+        list.addBefore(billEnd, johnDoe);
+        list.addBefore(new EmployeeDLL("Someone", "Else", 1111), mikeWilson);
+        list.printList();
+        System.out.println(list.getSize());
+    }
+}
