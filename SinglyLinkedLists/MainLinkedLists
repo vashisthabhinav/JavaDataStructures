@@ -1,0 +1,25 @@
+package linkedlists;
+
+public class MainLinkedLists {
+    public static void main(String[] args) {
+
+        EmployeeLinkedLists A1= new EmployeeLinkedLists("Abhinav","Vashisth",10);
+        EmployeeLinkedLists A2= new EmployeeLinkedLists("Anubhav","Pandey",11);
+        EmployeeLinkedLists A3= new EmployeeLinkedLists("Aryaman","Pathania",12);
+        EmployeeLinkedLists A4= new EmployeeLinkedLists("Ashutosh","Sharma",13);
+        ELL list= new ELL();
+        list.addToFront(A1);
+        list.addToFront(A2);
+        list.addToFront(A3);
+        list.addToFront(A4);
+        list.printList();
+        System.out.println("-------------------------");
+        System.out.println("Size of the Linked Lists: "+list.getSize());
+        System.out.println(list.isEmpty());
+        System.out.println("-------------------------");
+
+        list.removeFromFront();
+        System.out.println("Size of the Linked Lists: "+list.getSize());
+        list.printList();
+    }
+}
