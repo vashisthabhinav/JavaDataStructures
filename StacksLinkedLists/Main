@@ -1,0 +1,29 @@
+package stacksLL;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Employee A1 = new Employee("Abhinav", "Vashisth", 123);
+        Employee A2 = new Employee("Anubhav", "Pandey", 456);
+        Employee A3 = new Employee("Chirag", "Sharma", 222);
+        Employee A4 = new Employee("Vijay", "Verma", 325);
+        Employee A5 = new Employee("Aryan", "Dhiman", 789);
+
+        LinkedStack stack = new LinkedStack();
+        stack.push(A1);
+        stack.push(A2);
+        stack.push(A3);
+        stack.push(A4);
+        stack.push(A5);
+
+        stack.printStack();
+
+        System.out.println(stack.peek());
+        stack.printStack();
+
+        System.out.println("Popped: " + stack.pop());
+        System.out.println(stack.peek());
+
+    }
+}
