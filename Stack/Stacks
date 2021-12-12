@@ -1,0 +1,29 @@
+package stacks;
+/*
+Abstract data type
+LIFO- Last in First Out
+push- adds an item as the top on the stack
+pop- removes the top item on the stack
+peek- gets the top item on the stack
+Ideal backing data structure : linked list( we always work with the front of the linked list)
+TIME COMPLEXITY-
+O(1) for push,pop and peek, when using linked list
+If you use an array, then push is O(n), because the array may have to be resized
+If you know the maximum number of items that will ever be on a stack, an array can be a good choice
+If memory is tight, an array might be a good choice
+Linked list is ideal
+ */
+public class Stacks {
+    public static void main(String[] args) {
+        ArrayStack stack = new ArrayStack(10);
+        stack.push(new Employee("Abhinav","Vashisth",123));
+        stack.push(new Employee("Anubhav","Verma",456));
+        stack.push(new Employee("Aryaman","Sharma",789));
+        stack.push(new Employee("Last","Person",000));
+//        stack.printStack();
+        System.out.println(stack.peek());
+        System.out.println("Popped: "+ stack.pop());
+        System.out.println("-----------");
+        stack.printStack();
+    }
+}
