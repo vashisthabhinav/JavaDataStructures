@@ -81,26 +81,29 @@ public class EmployeeDoublyLinkedList {
          if the existing employee doesn't exist in the list
           */
         if (head == null) {
-            return false;
+            return false;//Means the list is empty. isEmpty() can also be used.
         }
-        // Find the existing employee
-        EmployeeNodeDLL current= head;
+        // Finding the existing employee
+        EmployeeNodeDLL current= head;// Starts with the head of the list.
         while(current!=null && !current.getEmployee().equals(existingEmployee)){
-            current=current.getNext();
+            //When current is not equal to null and not equal to the existing employee
+            current=current.getNext();//Moving to next node.
         }
         if (current == null) {
-            return false;
+            return false;//Existing Employee is not in the list
         }
-        EmployeeNodeDLL newNode=new EmployeeNodeDLL(newEmployee);
-        newNode.setPrevious(current.getPrevious());
-        newNode.setNext(current);
-        current.setPrevious(newNode);
+        //If Existing employee found.
+        EmployeeNodeDLL newNode=new EmployeeNodeDLL(newEmployee);//Create node for the new employee
+        newNode.setPrevious(current.getPrevious());//Previous field of the new employee will point to the prevoius field of the current/existing employee.
+        newNode.setNext(current);//New employee's next field should point to the current/existing employee.
+        current.setPrevious(newNode);//Current/existing employee's previous field will now point to the new employee.
         if (head==current){
-            head=newNode;
-        }else{
-            newNode.getPrevious().setNext(newNode);
+            //If the employee that we want to insert before might be at the head of the list.
+            head=newNode;//Change the head field to the new employee.
+        }else{//If this is not the case, then handeling the next field of the node was in the front of the current node.
+            newNode.getPrevious().setNext(newNode);//Settig it to the new node.
         }
         size++;
-        return true;
+        return true;// Returned true only if the employee is successfully added. Else false.
     }
 }
