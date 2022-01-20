@@ -6,11 +6,7 @@ public class Main {
 
         System.out.println(iterativeBinarySearch(intArray, -15));
         System.out.println(iterativeBinarySearch(intArray, 35));
-        System.out.println(iterativeBinarySearch(intArray, 8888));
-        System.out.println(iterativeBinarySearch(intArray, 1));
 
-        System.out.println(recursiveBinarySearch(intArray, -15));
-        System.out.println(recursiveBinarySearch(intArray, 35));
         System.out.println(recursiveBinarySearch(intArray, 8888));
         System.out.println(recursiveBinarySearch(intArray, 1));
     }
