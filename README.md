@@ -1,2 +1,2 @@
 # JavaDSA_Lists
-Various types of lists and Data Structures used in Java.
+In this repository I have put various types of lists and Data Structures used in Java.
